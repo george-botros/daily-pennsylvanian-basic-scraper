@@ -142,3 +142,7 @@ But it is important to use it responsibly and ethically. Here are some guideline
 The scraper initially made GET requests to the main DP site. Now, it gets it from /section/data so that it can get the data section's most recent stories chronologically. 
 1. HTML Element Selection
 Now that we are on /section/data, we need to change our selection to search for h3 tags with the class standard-link to grab the headlines.
+
+# Schedule Explanation
+
+Workflows can be scheduled using cron syntax in GH Actions. This will specify the exact times and intervals for its execution. A cron job consists of five fields, including  minute, hour, day of month, month, and day of week. The expression `0 20 * * *` translates to running the workflow daily at 8 PM UTC. With the changes I made, it will now run daily at 8 AM UTC and 8 PM UTC: `0 8,20 * * *`. 
