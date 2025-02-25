@@ -135,3 +135,10 @@ But it is important to use it responsibly and ethically. Here are some guideline
 9. Document your scraping process thoroughly for replicability, transparency and accountability.
 
 10. Continuously re-evaluate your scraping program against applicable laws and ethical principles.
+
+# Changes Made
+
+1. URL Update
+The scraper initially made GET requests to the main DP site. Now, it gets it from /section/data so that it can get the data section's most recent stories chronologically. 
+1. HTML Element Selection
+Now that we are on /section/data, we need to change our selection to search for h3 tags with the class standard-link to grab the headlines.
